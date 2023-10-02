@@ -12,7 +12,7 @@ export class SelectorPageComponent {
   public myForm: FormGroup = this.fb.group({
     region: ['', Validators.required],
     country: ['', Validators.required],
-    borders: ['', Validators.required]
+    borders: ['', Validators.required],
   })
   constructor(
     private fb: FormBuilder,
