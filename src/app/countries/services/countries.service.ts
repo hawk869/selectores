@@ -1,9 +1,15 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
+import {Region} from "../interfaces/country.interfaces";
 
 @Injectable({
   providedIn: 'root'
 })
 export class CountriesService {
 
+  private _regions: Region[] = [ Region.Africa, Region.Americas, Region.Oceania, Region.Asia, Region.Europe ];
   constructor() { }
+
+  get regions() : Region[] {
+    return [ ...this._regions ];
+  }
 }
